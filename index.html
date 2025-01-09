@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikacja Randkowa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Ekran logowania -->
+        <section id="login-screen" class="screen active">
+            <h1>Witaj w Aplikacji Randkowej</h1>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Nazwa użytkownika" required>
+                <input type="password" id="password" placeholder="Hasło" required>
+                <button type="submit">Zaloguj się</button>
+            </form>
+            <p>Nie masz konta? <a href="#" id="register-link">Zarejestruj się</a></p>
+        </section>
+
+        <!-- Ekran rejestracji -->
+        <section id="register-screen" class="screen">
+            <h1>Zarejestruj się</h1>
+            <form id="register-form">
+                <input type="text" id="reg-username" placeholder="Nazwa użytkownika" required>
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="password" id="reg-password" placeholder="Hasło" required>
+                <button type="submit">Zarejestruj się</button>
+            </form>
+            <p>Masz już konto? <a href="#" id="login-link">Zaloguj się</a></p>
+        </section>
+
+        <!-- Główna strona -->
+        <section id="main-screen" class="screen">
+            <header>
+                <h1>Witaj, <span id="user-name">Użytkowniku</span></h1>
+                <button id="logout-button">Wyloguj się</button>
+            </header>
+            <div id="profile-container">
+                <!-- Przykładowy profil -->
+                <div class="profile">
+                    <img src="https://via.placeholder.com/150" alt="Zdjęcie użytkownika">
+                    <h2>Jan Kowalski</h2>
+                    <p>Wiek: 25</p>
+                    <button class="like-button">❤️ Polub</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
